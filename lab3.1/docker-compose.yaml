@@ -9,8 +9,9 @@ services:
    restart: always
    networks: # Define netwroks per service / role
      - app_layer
+     - db_layer
   db_mysql:
-    image: wangxian/alpine-mysql
+    image: yanivomc/spring-mysql:latest
     environment: # env variables
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=music
